@@ -108,6 +108,7 @@ async function run() {
     fs.writeFileSync(kubeconfigPath, kubeconfig);
     issueCommand('set-env', { name: 'KUBECONFIG' }, kubeconfigPath);
     console.log('KUBECONFIG environment variable is set');
+    console.log(process.env)
     await setContext();
 }
 
