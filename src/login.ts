@@ -109,6 +109,7 @@ async function run() {
     fs.writeFileSync(kubeconfigPath, kubeconfig);
     fs.chmodSync(kubeconfigPath, '600');
     core.exportVariable('KUBECONFIG', kubeconfigPath);
+    core.exportVariable('DockerFilePath', 'DockerFilePath/from/input');
     console.log('KUBECONFIG environment variable is set');
     await setContext(kubeconfigPath);
 }
