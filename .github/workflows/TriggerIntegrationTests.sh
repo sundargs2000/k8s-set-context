@@ -8,10 +8,10 @@ tobranch=$6
 getPayLoad() {
     cat <<EOF
 {
-    "event_type": "SetupKubectlActionPR", 
+    "event_type": "K8sSetContextPR", 
     "client_payload": 
     {
-        "action": "SetupKubectl", 
+        "action": "K8sSetContext", 
         "commit": "$commit", 
         "repository": "$repository", 
         "prNumber": "$prNumber", 
